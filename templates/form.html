@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Form</title>
+    <link rel="stylesheet" href="./../static/styles.css">
+</head>
+
+<body>
+<div class="form-container" id="form-container">
+    <form id="prediction-form" action="\predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="surgeries">Number of Major Surgeries:</label>
+        <input type="number" id="surgeries" name="surgeries" required><br>
+
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" name="weight" required><br>
+
+        <label for="chronic">Any Chronic Disease (yes/no):</label>
+        <input type="text" id="chronic" name="chronic" required><br>
+
+        <label for="transplants">Any Transplants (yes/no):</label>
+        <input type="text" id="transplants" name="transplants" required><br>
+
+        <label for="cancer">History of Cancer in Family (yes/no):</label>
+        <input type="text" id="cancer" name="cancer" required><br>
+
+        <input id='submit_button' type="submit" value="Submit">
+    </form>
+<br>
+<br>
+<h3 style="color:white">{{ prediction_text }}</h3> 
+<br>
+<br>
+<p class="second">Source code can be found at <a href="https://github.com/mrityu98/flight_price_prediction/tree/master" target="_blank"><img class="github" src="{{ url_for('static', filename='images/github.png') }}" alt="github" width="32" height="32"></a></p>
+</div>
+<script src="./../static/scripts.js"></script>
+
+</body>
+</html>
+
